@@ -8,6 +8,8 @@
     outline: none;
     font-family: "TTLakes", sans-serif
 }
+
+
 .header{
     height: 90px;
     display: flex;
@@ -15,6 +17,7 @@
     align-items: center;
     background-color: #fff;
 }
+/* icons */
 .icon{
     width:40px;
     height: 40px;
@@ -23,6 +26,13 @@
     background-position: center;
     border-radius: 20px;
 }
+.repair-icon{  
+    background-image: url(img/repair.svg);
+}
+.check-icon{
+    background-image: url(img/check.svg);
+}
+/* end of icons */
 .header__i-group-1{
     display: none;
     margin-left: auto;
@@ -65,14 +75,15 @@
     margin: 24px 16px 24px 0;
     position: relative;
 }
-.header__repair-icon{
-    margin-left: 16px;
-    background-image: url(img/repair.svg);
+.header__icon4{
+    margin-left: 16px;  
 }
-.header__check-icon{
+
+.header__icon5{
     margin-left: 16px;
-    background-image: url(img/check.svg);
+    
 }
+
 .header__call-icon{
     padding-left: 16px;
     background-image: url(img/repair.svg);
@@ -89,16 +100,16 @@
 }
 .services{
     background-color: #f8f8f8;
+    padding:24px 0 24px 16px;
 }
 .services__header{
     display: flex;
     align-items: center;
-    padding: 24px 16px;
+    margin-bottom: 24px;
     
     
 }
 .services__title{
-
     width:100%;
     height: 40px;
     position: relative;
@@ -118,7 +129,9 @@
     left:-16px;
     top:0;
 }
-
+.services__icons{
+    display: none;
+}
 .services__wrapper{
     overflow: auto;
     white-space: nowrap;
@@ -137,38 +150,40 @@
     height: 40px;
     background: linear-gradient(
         to right,
-        rgba(255,255,255,0.1),
-        rgba(255,255,255,0.3),
+        rgba(255,255,255,0.2),
         rgba(255,255,255,0.5),
-        rgba(255,255,255,0.7),
-        rgba(255,255,255,0.9)
+        rgba(255,255,255,0.8),
+        rgba(255,255,255,0.95),
+        rgba(255,255,255,0.99)
         );
     position: absolute;
     right: 0;
-    opacity: 1;
+    
 }
     
 .services__items{
     display: flex;
-    padding: 16px;
+    padding: 0;
 }
 .services__item{
     padding:8px 9px 8px 16px;
     list-style-type: none;
-    margin-right: 12px;
 }
 .item3{
     display: none;
 }
+.item5{
+    display:none;
+}
 .services__item-active{
     border: 2px solid #B8FFEC;
+    background-color: #fff;
     border-radius: 6px;
 }
 .feedback{
     width:71px;
     height: 24px;
-    margin-left: 56px;
-    margin-bottom: 19px;
+    margin:14px auto 19px 56px;
     display: none;
 }
 .feedback__link{
@@ -176,14 +191,16 @@
     font-size: 16px;
     color:#7E7E82;
 }
-
+.about{
+    background-color: #f8f8f8;
+}
 .about__wrapper{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 .about__text{
-    padding: 0 16px 16px 16px;
+    padding: 0 16px 0 16px;
     font-size: 14px;
     letter-spacing: .2px;
 }
@@ -197,6 +214,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 16px;
 }
 .read-more__icon{
   width:24px;
@@ -216,9 +234,17 @@
 }
 .about__w-img{
     height: 230px;
+    padding: 20px 0 27px 0;
 }
 
 @media (min-width:768px) {
+    .header{
+        margin-right:16px;
+    }
+    .container{
+        margin-right:15px;
+    }
+    
     .header__menu{
         margin-left: 24px;
         margin-right: 60px;
@@ -237,31 +263,41 @@
     .header__i-group-1{
         display: flex;
     }
-    .header__check-icon{
+
+    .header__i-group-2{
         margin-right: 24px;
     }
+    .services{
+        padding:24px 0 24px 24px;
+    }
     .services__header{
-        padding: 24px 24px; 
+        margin-bottom: 32px; 
     }
     .services__title::before{
         left:-24px;
     }
-    .services__items{
-        padding-left:24px;
-    }
-    .about__wrapper{
-        flex-direction: row;
+    .about{
+        padding: 0 25px 40px 24px
     }
     .about__w-img{
         width:360px;
         height: 260px;
+        transform: translateY(-24px);
+        padding: 26px 0 25.5px 0;
+        
     }
     .about__img{
+        width:100%;
         height: 208px;
+        border-radius: 5px;
+        top:0
     }
     .about__wrapper{
+        flex-direction: row;
         height: 208px;
-        padding-left: 10px;
+    }
+    .about__text{
+        padding:0;
     }
     .about__paragraph{
         width:312px;
@@ -278,38 +314,41 @@
     .about__p1{
         display: block;
     }
-    .read-more{
-        padding-top: 10px;
-    }
+
 }
-@media (min-width:1100px) {
-    .header{
-        position: absolute;
-        right: 0;
+@media (min-width:1120px) {
+    body{
+        background-color: #f8f8f8;
     }
-    .services__header{
-        padding:38px 0 8.5px 32px;
+    .header{
+        display: none;
+    }
+    .container{
+        height:535px;
+        margin-right:0;
+    }
+    .services{
+        padding:42px 25px 0 0;
+        
+    }
+    .services__wrapper::after{
+        display: none;
     }
     .services__title::before{
         left:-32px;
     }
-    .header__i-group-1{
-        display: none;
+    .services__header{
+        padding:0 7px 0 33px;
     }
-    .header__block{
-        display: none;
+    
+    .services__icons{
+        display: flex;
     }
-    .header__i-group-2{
-        margin-top: 49px;
-        z-index: 10;
-    }
-    .header__i-group-2::before{
-        display: none;
-    }
-    .header__repair-icon{
+   
+    .services__icon1{
         position: relative;
     }
-    .header__repair-icon::before{
+    .services__icon1::before{
         content:"Оставить заявку";
         height: 24px;
         font-size: 16px;
@@ -319,11 +358,11 @@
         right:47px;
         top:8px;
     }
-    .header__check-icon{
+    .services__icon2{
         position: relative;
         margin-left:142px
     }
-    .header__check-icon::before{
+    .services__icon2::before{
         content:"Статус ремонта";
         height: 24px;
         font-size: 16px;
@@ -333,25 +372,81 @@
         right:47px;
         top:8px;
     }
+    
     .services__items{
         padding-left:32px;
         padding-top:0;
     }
-
-    .item3{
-        display: block;
+    .services__item-active{
+        border: none;
+        background-color: #f8f8f8;
+        border-radius: 0;
+    }
+    
+    .item1{
+       order:2;
     }
     .item2{
         display: none;
     }
+    .item3{
+        display: block;
+        order:1;
+        border: 2px solid #B8FFEC;
+        background-color: #fff;
+        border-radius: 6px;
+    }
+    .item4{
+        order:3;
+    }
+    .item5{
+        display: block;
+        order:4;
+    }
+    .item6{
+        order:5;
+    }
+    
     .feedback{
         display: block;
+    }
+    .about{
+        margin-left:34px ;
+        padding:0;
+    }
+    .about__wrapper{
+        display: flex;
+        padding-left: 0;
+    }
+    .about__text{
+        width:490px;
+    }
+    .about__paragraph{
+        width:100%;
+        padding-right: 28px;
+    }
+    .read-more{
+        padding-top: 13px;
     }
     .about__p1{
         display: none;
     }
     .about__p2{
         display: block;
+    }
+    .about__w-img{
+        width:531.5px;
+        height: 375px;
+        padding:0;
+        transform: translateY(-62px);
+    }
+    .about__img{
+        width:100%;
+        height: 100%;
+        /* padding:38.3px 0 37.8px 0; */
+        padding-bottom:37.8px ;
+        margin-top: 38.3px ;
+        border-radius: 5px;
     }
     
 }
