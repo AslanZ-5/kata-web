@@ -150,11 +150,11 @@
     height: 40px;
     background: linear-gradient(
         to right,
-        rgba(255,255,255,0.2),
-        rgba(255,255,255,0.5),
-        rgba(255,255,255,0.8),
-        rgba(255,255,255,0.95),
-        rgba(255,255,255,0.99)
+        rgba(248, 248, 248,0.2),
+        rgba(248, 248, 248,0.5),
+        rgba(248, 248, 248,0.8),
+        rgba(248, 248, 248,0.95),
+        rgba(248, 248, 248,0.99)
         );
     position: absolute;
     right: 0;
