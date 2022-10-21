@@ -151,6 +151,9 @@
     list-style-type: none;
     margin-right: 12px;
 }
+.item3{
+    display: none;
+}
 .services__item-active{
     border: 2px solid #B8FFEC;
     border-radius: 6px;
@@ -219,7 +222,7 @@
     .services__title::before{
         left:-24px;
     }
-    .services__items:first-child{
+    .services__items{
         padding-left:24px;
     }
     .about__wrapper{
@@ -251,4 +254,68 @@
     .read-more{
         padding-top: 10px;
     }
+}
+@media (min-width:1100px) {
+    .header{
+        position: absolute;
+        right: 0;
+    }
+    .services__header{
+        padding:38px 0 8.5px 32px;
+    }
+    .services__title::before{
+        left:-32px;
+    }
+    .header__i-group-1{
+        display: none;
+    }
+    .header__block{
+        display: none;
+    }
+    .header__i-group-2{
+        margin-top: 49px;
+        z-index: 10;
+    }
+    .header__i-group-2::before{
+        display: none;
+    }
+    .header__repair-icon{
+        position: relative;
+    }
+    .header__repair-icon::before{
+        content:"Оставить заявку";
+        height: 24px;
+        font-size: 16px;
+        letter-spacing: -.2px;
+        position: absolute;
+        white-space: nowrap;
+        right:47px;
+        top:8px;
+    }
+    .header__check-icon{
+        position: relative;
+        margin-left:142px
+    }
+    .header__check-icon::before{
+        content:"Статус ремонта";
+        height: 24px;
+        font-size: 16px;
+        letter-spacing: -.2px;
+        position: absolute;
+        white-space: nowrap;
+        right:47px;
+        top:8px;
+    }
+    .services__items{
+        padding-left:32px;
+        padding-top:0;
+    }
+
+    .item3{
+        display: block;
+    }
+    .item2{
+        display: none;
+    }
+    
 }
